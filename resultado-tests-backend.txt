@@ -1,0 +1,17 @@
+▶ API /api/materias
+  ✔ GET sin datos devuelve lista vacía (31.631219ms)
+  ✔ POST válido crea la materia (201) y queda persistida (30.655159ms)
+  ✔ POST sin nombre devuelve 400 (3.935847ms)
+  ✔ POST con nombre repetido (otra mayúscula) devuelve 400 (3.054247ms)
+  ✔ POST con JSON roto devuelve 400 y no 500 (2.217909ms)
+  ✔ caso límite: nombre de exactamente 60 caracteres se acepta, 61 no (7.668114ms)
+  ✔ GET de una materia inexistente devuelve 404 (4.825613ms)
+✔ API /api/materias (89.774403ms)
+ℹ tests 7
+ℹ suites 1
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 215.569496

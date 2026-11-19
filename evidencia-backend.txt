@@ -1,0 +1,23 @@
+$ curl http://localhost:3001/api/materias
+[]  [HTTP 200]
+
+$ curl -X POST .../api/materias -d {"nombre":"Matemática","color":"#3366cc","profesor":"Prof. Gómez"}
+{"id":"deb7f68d-b8f6-4aa4-8851-8fe791e094c9","nombre":"Matemática","color":"#3366cc","profesor":"Prof. Gómez","creadaEl":"2026-10-25T20:23:24.793Z"}  [HTTP 201]
+
+$ curl -X POST .../api/materias -d {"nombre":"   "}
+{"errores":["El nombre es obligatorio"]}  [HTTP 400]
+
+$ curl -X POST .../api/materias -d {"nombre":"matemática"}   (duplicada)
+{"errores":["Ya existe una materia con ese nombre"]}  [HTTP 400]
+
+$ curl -X POST .../api/materias -d {"nombre":"Historia","color":"rojo"}
+{"errores":["El color debe tener formato #RRGGBB"]}  [HTTP 400]
+
+$ curl -X POST .../api/materias -d "esto no es json"
+{"errores":["El cuerpo no es JSON válido"]}  [HTTP 400]
+
+$ curl http://localhost:3001/api/materias
+[{"id":"deb7f68d-b8f6-4aa4-8851-8fe791e094c9","nombre":"Matemática","color":"#3366cc","profesor":"Prof. Gómez","creadaEl":"2026-10-25T20:23:24.793Z"}]  [HTTP 200]
+
+$ curl http://localhost:3001/api/materias/no-existe
+{"error":"Materia no encontrada"}  [HTTP 404]

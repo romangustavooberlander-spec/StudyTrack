@@ -1,0 +1,40 @@
+▶ [ANTES] obtenerTareasParaMostrar
+  ✔ caso correcto: sin filtros devuelve todas ordenadas por fecha límite (1.523134ms)
+  ✔ caso correcto: marca como vencida una pendiente con fecha pasada (0.266668ms)
+  ✔ caso correcto: una completada sigue completada aunque su fecha haya pasado (0.154842ms)
+  ✔ caso correcto: combina filtro por materia y por estado (0.200686ms)
+  ✔ caso inválido: filtros vacíos/null/undefined se comportan como 'todas'/'todos' (0.238238ms)
+  ✔ caso inválido: materia inexistente devuelve lista vacía (0.102353ms)
+  ✔ caso límite: lista de tareas vacía (0.083914ms)
+  ✔ caso límite: tarea que vence hoy todavía está pendiente (0.170502ms)
+  ✔ caso límite: no modifica el array original (0.441569ms)
+✔ [ANTES] obtenerTareasParaMostrar (4.743819ms)
+▶ [ANTES] validarTarea
+  ✔ caso correcto: tarea completa no tiene errores (0.240536ms)
+  ✔ caso inválido: sin materia ni fecha devuelve ambos errores (0.197521ms)
+  ✔ caso límite: título con solo espacios es inválido (0.083953ms)
+✔ [ANTES] validarTarea (0.776564ms)
+▶ [DESPUÉS] obtenerTareasParaMostrar
+  ✔ caso correcto: sin filtros devuelve todas ordenadas por fecha límite (1.254789ms)
+  ✔ caso correcto: marca como vencida una pendiente con fecha pasada (0.09349ms)
+  ✔ caso correcto: una completada sigue completada aunque su fecha haya pasado (0.058053ms)
+  ✔ caso correcto: combina filtro por materia y por estado (0.049281ms)
+  ✔ caso inválido: filtros vacíos/null/undefined se comportan como 'todas'/'todos' (0.182898ms)
+  ✔ caso inválido: materia inexistente devuelve lista vacía (0.049207ms)
+  ✔ caso límite: lista de tareas vacía (0.039495ms)
+  ✔ caso límite: tarea que vence hoy todavía está pendiente (0.041933ms)
+  ✔ caso límite: no modifica el array original (0.092697ms)
+✔ [DESPUÉS] obtenerTareasParaMostrar (2.031329ms)
+▶ [DESPUÉS] validarTarea
+  ✔ caso correcto: tarea completa no tiene errores (0.126993ms)
+  ✔ caso inválido: sin materia ni fecha devuelve ambos errores (0.040716ms)
+  ✔ caso límite: título con solo espacios es inválido (0.036518ms)
+✔ [DESPUÉS] validarTarea (0.271475ms)
+ℹ tests 24
+ℹ suites 4
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.00555
